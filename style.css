@@ -1,0 +1,347 @@
+/* | IMPORTS */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400&display=swap');
+
+/* | CSS RESET */
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+/* | UTILITY STYLES */
+img {
+	display: block;
+}
+
+.cp {
+	cursor: pointer;
+}
+
+/* | VARIABLES */
+:root {
+	/* | COLORS */
+	--violet: hsl(257, 40%, 49%);
+	--soft-magenta: hsl(300, 69%, 71%);
+	--magenta: hsl(334, 100%, 65%);
+	--magenta: #ff4d9a;
+	--white: hsl(0, 0%, 100%);
+
+	/* | FONTS  */
+	--h1-fonts: 400 45px 'Open Sans';
+	--p-fonts: 400 20px 'Open Sans';
+}
+
+/* | GENERAL STYLES */
+html {
+	max-width: 1440px;
+	height: auto;
+}
+
+body {
+	max-width: 1440px;
+
+	/* | BACKGROUND  */
+	/* | LONGHAND */
+	/* background-image: url(img/bg-desktop.svg);
+	background-repeat: no-repeat;
+	background-position: center; */
+
+	/* | SHORTHAND */
+	background: var(--violet) url(img/bg-desktop.svg) no-repeat center;
+	background-size: cover;
+
+	line-height: 1.5;
+	color: var(--white);
+	font: var(--p-fonts);
+}
+
+section.container {
+	width: 100%;
+	padding: 65px 80px 40px;
+	display: flex;
+	flex-flow: column;
+	justify-content: center;
+	align-items: flex-start;
+	gap: 27px;
+}
+
+header {
+	width: 200px;
+	margin-bottom: 75px;
+}
+
+header img {
+	width: 100%;
+	height: auto;
+}
+
+main {
+	display: flex;
+	justify-content: center;
+	align-items: flex-start;
+	gap: 60px;
+}
+
+.section-img {
+	max-width: 660px;
+}
+
+.section-img img {
+	width: 100%;
+	height: auto;
+}
+
+article {
+	max-width: 520px;
+	padding: 50px 0;
+	display: flex;
+	flex-flow: column wrap;
+	justify-content: flex-start;
+	align-items: flex-start;
+	gap: 25px;
+}
+
+h1 {
+	font: var(--h1-fonts);
+}
+
+div.btn {
+	width: 200px;
+	height: 56px;
+	background-color: var(--white);
+	color: var(--violet);
+	font: inherit;
+	border-radius: 50px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	box-shadow: 0 5px 50px 0 #333;
+}
+
+div.btn:hover {
+	background-color: var(--soft-magenta);
+	color: var(--white);
+}
+
+footer {
+	width: 100%;
+	display: flex;
+	justify-content: right;
+	align-items: center;
+	gap: 16px;
+}
+
+.social-links p {
+	width: 40px;
+	height: 40px;
+	border-radius: 40px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border: 1px solid var(--white);
+}
+
+.fb img {
+	width: 10px;
+	height: 21px;
+}
+
+.tw img {
+	width: 18px;
+	height: auto;
+}
+
+.ig img {
+	width: 20px;
+	height: auto;
+}
+
+.social-links > :last-child {
+	display: none;
+}
+
+.social-links:hover > :first-child {
+	display: none;
+}
+
+.social-links:hover > :last-child {
+	display: flex;
+	border: 1px solid var(--magenta);
+}
+
+@media screen and (max-width: 1150px) {
+	main {
+		gap: 30px;
+	}
+
+	article {
+		padding: 0;
+	}
+}
+
+@media screen and (max-width: 1000px) {
+	/* | VARIABLES */
+	:root {
+		/* | FONTS  */
+		--h1-fonts: 400 32px 'Open Sans';
+		--p-fonts: 400 14px 'Open Sans';
+	}
+
+	div.btn {
+		width: 150px;
+		height: 42px;
+	}
+
+	.social-links p {
+		width: 30px;
+		height: 30px;
+	}
+
+	.fb img {
+		width: 7px;
+		height: 16px;
+	}
+
+	.tw img {
+		width: 14px;
+	}
+
+	.ig img {
+		width: 15px;
+	}
+}
+
+@media screen and (max-width: 750px) {
+	/* | VARIABLES */
+	:root {
+		/* | FONTS  */
+		--h1-fonts: 400 51px 'Open Sans';
+		--p-fonts: 400 32px 'Open Sans';
+	}
+
+	/* | GENERAL STYLES */
+	html {
+		max-width: 750px;
+	}
+
+	body {
+		max-width: 750px;
+		background: var(--violet) url(img/bg-mobile.svg) no-repeat top;
+		background-size: contain;
+	}
+
+	section.container {
+		padding: 75px 80px 80px;
+		gap: 140px;
+	}
+
+	header {
+		width: 240px;
+		margin-bottom: 15px;
+	}
+
+	main {
+		flex-flow: column;
+		align-items: center;
+		gap: 140px;
+	}
+
+	article {
+		max-width: 100%;
+		justify-content: center;
+		align-items: center;
+		text-align: center;
+		gap: 52px;
+	}
+
+	div.btn {
+		width: 400px;
+		height: 80px;
+	}
+
+	footer {
+		justify-content: center;
+		gap: 20px;
+	}
+
+	.social-links p {
+		width: 55px;
+		height: 55px;
+	}
+
+	.fb img {
+		width: 15px;
+		height: 29px;
+	}
+
+	.tw img {
+		width: 24px;
+	}
+
+	.ig img {
+		width: 26px;
+	}
+}
+
+@media screen and (max-width: 375px) {
+	/* | VARIABLES */
+	:root {
+		/* | FONTS  */
+		--h1-fonts: 400 25px 'Open Sans';
+		--p-fonts: 400 16px 'Open Sans';
+	}
+
+	/* | GENERAL STYLES */
+	html {
+		max-width: 375px;
+	}
+
+	body {
+		max-width: 375px;
+	}
+
+	section.container {
+		padding: 38px 40px 40px;
+		gap: 70px;
+	}
+
+	header {
+		width: 120px;
+		margin-bottom: 8px;
+	}
+
+	main {
+		gap: 70px;
+	}
+
+	article {
+		gap: 26px;
+	}
+
+	div.btn {
+		width: 200px;
+		height: 40px;
+	}
+
+	footer {
+		gap: 10px;
+	}
+
+	.social-links p {
+		width: 28px;
+		height: 28px;
+	}
+
+	.fb img {
+		width: 8px;
+		height: 15px;
+	}
+
+	.tw img {
+		width: 12px;
+	}
+
+	.ig img {
+		width: 13px;
+	}
+}
